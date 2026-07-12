@@ -32,6 +32,10 @@ python manage.py runserver
 
 API disponibile su `http://127.0.0.1:8000/`.
 
+## ADMIN
+
+- admin - 12345678
+
 ## Database demo
 
 Il repository include `db.sqlite3` già popolato. Per ripopolarlo da zero:
