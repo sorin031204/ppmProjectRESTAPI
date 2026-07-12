@@ -71,3 +71,7 @@ class OrderSerializer(serializers.ModelSerializer):
         model = Order
         fields = ['id', 'user', 'status', 'items', 'total', 'created_at']
         read_only_fields = ['user']
+
+
+class OrderCreateSerializer(serializers.Serializer):
+    pass

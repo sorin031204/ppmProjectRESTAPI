@@ -8,7 +8,7 @@ from django.db import transaction
 from .models import Category, Product, Cart, CartItem, Order, OrderItem
 from .serializers import (
     CategorySerializer, ProductSerializer, CartSerializer,
-    CartItemSerializer, OrderSerializer
+    CartItemSerializer, OrderSerializer, OrderCreateSerializer
 )
 from .permissions import IsStoreManagerOrReadOnly, IsOwner
 
@@ -85,6 +85,11 @@ class OrderViewSet(viewsets.ModelViewSet):
         if user.role == 'store_manager':
             return Order.objects.all()
         return Order.objects.filter(user=user)
+
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return OrderCreateSerializer
+        return OrderSerializer
 
     def create(self, request, *args, **kwargs):
         cart = get_object_or_404(Cart, user=request.user)
