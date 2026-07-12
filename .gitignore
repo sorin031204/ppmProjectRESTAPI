@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Django
+*.log
+local_settings.py
+
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Environment variables
+.env
