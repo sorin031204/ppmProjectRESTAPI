@@ -47,12 +47,12 @@ python manage.py seed_data
 
 ## Deploy
 
-`[LINK DA AGGIUNGERE]`
+`https://ppmprojectrestapi.onrender.com`
 
 ## Endpoint
 
 Base URL locale: `http://127.0.0.1:8000`
-Base URL deploy: `[DA AGGIUNGERE]`
+Base URL deploy: `ppmprojectrestapi.onrender.com`
 
 ### Autenticazione
 
